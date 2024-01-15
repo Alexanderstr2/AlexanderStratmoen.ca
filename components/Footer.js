@@ -5,27 +5,27 @@ export default function Footer() {
   const links = [
     {
       title: 'Email',
-      url: '/contact',
+      url: 'mailto:hello@alexanderstratmoen.ca',
       icon: 'ri-mail-line',
     },
     {
       title: 'Twitter',
-      url: 'https://twitter.com/zenorocha',
+      url: 'https://twitter.com/alexstratmoen',
       icon: 'ri-twitter-line',
     },
     {
       title: 'GitHub',
-      url: 'https://github.com/zenorocha',
+      url: 'https://github.com/Alexanderstr2',
       icon: 'ri-github-line',
     },
     {
       title: 'linkedin',
-      url: 'https://linkedin.com/in/zenorocha',
+      url: 'https://www.linkedin.com/in/alexander-stratmoen-133380152/',
       icon: 'ri-linkedin-line',
     },
     {
       title: 'Instagram',
-      url: 'https://instagram.com/zenorocha',
+      url: 'https://www.instagram.com/alexstratmoen/',
       icon: 'ri-instagram-line',
     },
   ]
@@ -47,9 +47,11 @@ export default function Footer() {
   }
 
   return (
-    <Container>
-      {links.map(renderAnchor)}
-    </Container>
+    <>
+      <Container>
+        {links.map(renderAnchor)}
+      </Container>
+    </>
   )
 }
 

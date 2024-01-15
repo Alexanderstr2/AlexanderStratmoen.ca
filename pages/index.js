@@ -26,8 +26,8 @@ export default function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={description} name="description" />
         <meta content={description} property="og:description" />
-        <meta content="https://alexanderstratmoen.com" property="og:url" />
-        <meta content={`https://alexanderstratmoen.com${image}`} property="og:image" />
+        <meta content="https://alexanderstratmoen.ca" property="og:url" />
+        <meta content={`https://alexanderstratmoen.ca${image}`} property="og:image" />
       </Head>
 
       <Navbar />
