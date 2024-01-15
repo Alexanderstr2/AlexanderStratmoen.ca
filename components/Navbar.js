@@ -8,7 +8,6 @@ import { useKBar } from 'kbar'
 export default function Navbar() {
   const router = useRouter()
   const pages = [
-    'About'
   ]
 
   // const pages = [
@@ -30,7 +29,7 @@ export default function Navbar() {
     <AnimateSharedLayout>
       <Header>
         <Link href="/" passHref>
-          <ButtonLogo as="a">z</ButtonLogo>
+          <ButtonLogo as="a">a</ButtonLogo>
         </Link>
 
         <Nav>

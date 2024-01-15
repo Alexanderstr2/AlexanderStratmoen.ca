@@ -51,6 +51,7 @@ export default function Footer() {
       <Container>
         {links.map(renderAnchor)}
       </Container>
+      <Message>Thanks to <a href="https://github.com/zenorocha/zenorocha.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>Zenorocha</a> for the amazing site template!</Message>
     </>
   )
 }
@@ -96,3 +97,11 @@ const Title = styled('span', {
   display: 'none',
   '@bp2': { display: 'block' },
 })
+
+const Message = styled('div', {
+  color: '$secondary',
+  textAlign: 'center',
+  paddingTop: '20px',
+  paddingBottom: '20px',
+  fontSize: '15px',
+});
