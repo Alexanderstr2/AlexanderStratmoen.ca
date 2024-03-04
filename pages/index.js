@@ -37,8 +37,7 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Founder & CEO at{' '}
-                  <a href="https://cosinenetworks.ca" target="blank">Cosine Networks</a>
+                <strong>Founder & Stealth and CE Student @ UW
                 </strong><br />
                 {description}
               </p>
