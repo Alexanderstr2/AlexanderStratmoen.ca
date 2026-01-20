@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Alexander Stratmoen',
-      description: 'Building a better internet.',
+      description: 'Developing API infrastructure for the built world',
       image: '/static/images/home-bw.jpg',
     },
   }
