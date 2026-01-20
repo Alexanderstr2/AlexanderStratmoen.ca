@@ -69,23 +69,31 @@ export default function CommandBar(props) {
       icon: <Lottie lottieRef={emailRef} style={iconSize} animationData={emailIcon} loop={false} autoplay={false} />,
     },
     {
+      id: 'voltra',
+      name: 'Voltra',
+      shortcut: ['g', 'v'],
+      keywords: 'voltra company',
+      section: 'Go To',
+      perform: () =>
+        window.open('https://voltra.com', '_blank'),
+      icon: <Lottie lottieRef={projectsRef} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
+    },
+    {
       id: 'home',
       name: 'Home',
       shortcut: ['g', 'h'],
       keywords: 'go-home',
       section: 'Go To',
-      perform: () =>
-        window.open('mailto:hello@alexanderstratmoen.ca', '_blank'),
+      perform: () => router.push('/'),
       icon: <Lottie lottieRef={homeRef} style={iconSize} animationData={homeIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'blog',
       name: 'Blog',
       shortcut: ['g', 'b'],
-      keywords: 'go-articles',
+      keywords: 'go-articles blog posts',
       section: 'Go To',
-      perform: () =>
-        window.open('https://alexanderstratmoen.substack.com', '_blank'),
+      perform: () => router.push('/blog'),
       icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
     }
   ]

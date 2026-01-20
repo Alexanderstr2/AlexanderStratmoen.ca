@@ -8,18 +8,9 @@ import { useKBar } from 'kbar'
 export default function Navbar() {
   const router = useRouter()
   const pages = [
+    { name: 'Voltra', href: 'https://voltra.com', external: true },
+    { name: 'Blog', href: '/blog', external: false },
   ]
-
-  // const pages = [
-  //   'About',
-  //   'Articles',
-  //   'Projects',
-  //   'Talks',
-  //   'Podcasts',
-  //   'Investing',
-  //   'Uses',
-  //   'Reminder',
-  // ]
 
 
   const [hovered, setHovered] = useState('')
@@ -35,18 +26,44 @@ export default function Navbar() {
         <Nav>
           <List>
             {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
-              const isHovered = hovered === page
+              const isHovered = hovered === page.name
+
+              if (page.external) {
+                return (
+                  <li key={page.name}>
+                    <Anchor
+                      href={page.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <NavContainer
+                        onHoverStart={() => setHovered(page.name)}
+                        onHoverEnd={() => setHovered('')}
+                      >
+                        {isHovered && (
+                          <NavHovered
+                            layoutId="nav"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                          />
+                        )}
+                        {page.name}
+                      </NavContainer>
+                    </Anchor>
+                  </li>
+                )
+              }
 
               return (
-                <li key={page}>
-                  <Link href={path} passHref>
+                <li key={page.name}>
+                  <Link href={page.href} passHref>
                     <Anchor>
                       <NavContainer
-                        onHoverStart={() => setHovered(page)}
+                        onHoverStart={() => setHovered(page.name)}
                         onHoverEnd={() => setHovered('')}
                         css={
-                          router.pathname == path
+                          router.pathname == page.href
                             ? {
                                 color: '$primary',
                                 '&::after': { opacity: 1 },
@@ -62,7 +79,7 @@ export default function Navbar() {
                             exit={{ opacity: 0 }}
                           />
                         )}
-                        {page}
+                        {page.name}
                       </NavContainer>
                     </Anchor>
                   </Link>

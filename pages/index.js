@@ -37,7 +37,7 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Data @ Theory & CE @ UW
+                <strong>Founder / CEO @ <a href="https://voltra.com" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'underline'}}>Voltra</a>
                 </strong><br />
                 {description}
               </p>
