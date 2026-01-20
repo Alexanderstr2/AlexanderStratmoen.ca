@@ -91,9 +91,9 @@ export default function CommandBar(props) {
       id: 'blog',
       name: 'Blog',
       shortcut: ['g', 'b'],
-      keywords: 'go-articles blog posts',
+      keywords: 'go-articles blog posts substack',
       section: 'Go To',
-      perform: () => router.push('/blog'),
+      perform: () => window.open('https://alexanderstratmoen.substack.com', '_blank'),
       icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
     }
   ]

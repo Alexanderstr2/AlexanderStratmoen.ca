@@ -9,7 +9,7 @@ export default function Navbar() {
   const router = useRouter()
   const pages = [
     { name: 'Voltra', href: 'https://voltra.com', external: true },
-    { name: 'Blog', href: '/blog', external: false },
+    { name: 'Blog', href: 'https://alexanderstratmoen.substack.com', external: true },
   ]
 
 
